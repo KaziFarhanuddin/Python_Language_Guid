@@ -1,4 +1,4 @@
-print("Not Now encapulated".center(100, '-'))
+print("Not encapulated".center(100, '-'))
 class Human():
 	def __init__(self, name, age):
 		if type(age) == int:

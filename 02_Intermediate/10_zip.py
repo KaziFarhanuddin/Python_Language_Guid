@@ -1,3 +1,10 @@
+'''
+	This is to show zip 
+		It will make a generator which over iterating will give tuples containing
+		values taken from same indexe.
+		If one of the list/tuple is smaller generator will ony be iterated by length 
+		of smalles list/tuple.
+'''
 a = [1, 2, 3, 4]
 b = [5, 6, 0, 10]
 c = ['a', 'b', 'c', 'd']

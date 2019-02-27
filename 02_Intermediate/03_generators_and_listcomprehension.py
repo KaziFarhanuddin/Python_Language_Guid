@@ -1,14 +1,15 @@
-#This is not a generator
-#We are using List comprehension []
-xyz = [x for x in  range(5)]
-print(xyz)
+'''Comparing listcomprehension and generator expressions'''
 
-#Range is a generator exprenseon
+#This is List comprehension []
+XYZ = [x for x in  range(5)]
+print(XYZ)
+
+#Range is a generator exprenseon ()
 #This is a generator that means it dosent store anything 
 #	in memory so its faster to create but slower to iterate
-xyz = (x for x in  range(5))
-print(xyz)
+XYZ = (x for x in  range(5))
+print(XYZ)
 
-for i in xyz:
+for i in XYZ:
 	print(i)
 

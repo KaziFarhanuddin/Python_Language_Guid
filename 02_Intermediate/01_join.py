@@ -1,6 +1,8 @@
-names = ['farhan', 'danyal', 'noman']
+''' This is to illustrate how join works '''
 
-for name in names:
-	print(' '.join(["Hi",name]))
+NAMES = ['farhan', 'danyal', 'noman']
 
-print(', '.join(names))
+for name in NAMES:
+    print(' '.join(["Hi", name]))
+
+print(', '.join(NAMES))

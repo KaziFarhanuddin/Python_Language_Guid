@@ -1,7 +1,12 @@
-l = [i for i in range(100)]
-for i in range(len(l)):
-	print(l[i],i) 
+'''
+	This is to show enumerate 
+		It allows us to iterate over a list and also get the index at the same time
+'''
 
-l = [i for i in range(100)]
-for j,i in enumerate(l):
-	print(j,i)
+LIST = [i for i in range(100)]
+for i in range(len(LIST)):
+    print(LIST[i], i)
+
+LIST = [i for i in range(100)]
+for j, i in enumerate(LIST):
+    print(j, i)
