@@ -4,10 +4,11 @@ Set up
 
 pip
 # https://pypi.org/
-# pip
+# pip install (module name)
 
 wheel
 # wheel using pip
+pip install (.wheel file)
 
 git
 # pip install git+(grporisotry).git
