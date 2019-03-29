@@ -10,9 +10,9 @@ Datatypes
 Operators
 unpacking (x,y,z = a,b,c)
 
-#### Intermidate
+#### Basics
 datetime
-pip
+is
 
 #### DataBase
 openpyxl
@@ -29,3 +29,7 @@ Shotcuts
 __str__ -> (Easy to read)
 __repr__ -> Changes for inspect (unambiguous | Explesit |for more detail)
 if no __str__ not defined then __repr__ is calles
+
+#### info
+Boolean is sub type of integer
+Dictnaries is hashmaps

@@ -19,3 +19,6 @@ git
 
 	If want to download the ziped repo and install
 	#  pip install (git porisotry)/archive/(branch / commitID).zip
+
+easy_install
+	# easy_install (module name)
