@@ -1,3 +1,6 @@
+# This is to explain the difference between
+# class variables and instance variables
+
 class human():
 	className = 'human'	#Class Variable
 

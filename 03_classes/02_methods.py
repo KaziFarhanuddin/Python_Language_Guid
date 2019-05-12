@@ -1,3 +1,5 @@
+# This script is to illustrate how to use methods in python
+
 class Fighter():
 	"""Hear we write class docs"""
 	def __init__(self, helth, attack):
