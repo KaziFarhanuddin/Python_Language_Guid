@@ -24,7 +24,7 @@ Mutable/ImMutable:
 		tuple
 		complex
 
-	note :- str(if has special char becoms mutable)
+	note :- str(if has special char becoms immutable)
 
 About list problem when you say 
 	list 2 = list 1

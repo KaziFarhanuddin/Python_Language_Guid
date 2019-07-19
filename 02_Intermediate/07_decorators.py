@@ -2,6 +2,9 @@
 	This script is to illustrate decorators in python
 	Mainly decorator is a rapper for functions
 '''
+'''
+By definition, a decorator is a function that takes another function and extends the behavior of the latter function without explicitly modifying it.
+'''
 
 
 # Part 1 (Simple decorator)
@@ -48,11 +51,17 @@ print()
 
 
 # Part 3 (Taking more args)
+'''
+	the syntax for decorators with arguments is a bit different - 
+	the decorator with arguments should return a function that will take a function and return another function. 
+	So it should really return a normal decorator
+'''
+
 def decorator(name):
 	def sub_dec(itm):
 		@wraps(itm)
-		def run():
-			return f'{name} of {itm()}'
+		def run(*args):
+			return f'{name} of {itm(*args)}'
 		return run 
 	return sub_dec
 
@@ -68,8 +77,9 @@ print()
 # Part 4 (Nesterding)
 @decorator('SOMEONE ')
 @decorator('ME ')
-def function():
+def function(a):
 	'''This is function is using a decorator'''
 	return "bead" 
 
-print(function())
+print(function(12))
+
