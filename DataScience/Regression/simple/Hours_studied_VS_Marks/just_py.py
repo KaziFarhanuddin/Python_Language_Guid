@@ -16,6 +16,7 @@ def gradient_descent_runner(points, starting_b, starting_m, learning_rate, num_i
     m = starting_m
 
     for _ in range(num_iterations):
+        # print(compute_error_for_given_points(b, m, points))
         b, m = gradient(b, m, points, learning_rate)
         # show_points_and_line(points, m, b)
 
@@ -26,9 +27,11 @@ def gradient(current_b, current_m, points, learning_rate):
     m_gradient = 0
 
     for point in points:
+        x = point[0]
+        y = point[1]
         # get direction withrespect to b and m
-        m_gradient += (point[0] * (point[1] - (current_m * point[0] + current_b)))
-        b_gradient += (point[1] - (current_m * point[0] + current_b)) 
+        m_gradient += (x * (y - (current_m * x + current_b)))
+        b_gradient += (y - (current_m * x + current_b))
 
     m_gradient = -2/len(points) * m_gradient
     b_gradient = -2/len(points) * b_gradient
@@ -55,15 +58,15 @@ def show_points_and_line(points, m, b):
 
 def run():
     # Step 1 : Get data
-    points = np.genfromtxt('data.csv', delimiter=',')
+    points = np.genfromtxt('data.csv', delimiter=',', dtype=np.float64)
 
     # Step 2 : define out hyperparameters (depending on how our model works)
     # we will use learning rate
-    learning_rate = 0.0001
+    learning_rate = 0.0004
     # y = mx + c
     init_b = 0
     init_m = 0
-    num_iterations = 1000
+    num_iterations = 300000
 
     # Step 3 : Train our model 
     print(f"Starting gradient descent at b = {init_b}, m = {init_b}, error = {compute_error_for_given_points(init_b, init_m, points)}")
@@ -71,8 +74,13 @@ def run():
     print(f"Ending gradient descent at b = {b}, m = {m}, error = {compute_error_for_given_points(b, m, points)}")
 
     # Step 4 : Show plots
-    show_points_and_line(points, m, b)
+    # show_points_and_line(points, m, b)
 
+    # Estimating value
+    # # y = mx + b
+    # hours = float(input("Enter hours of which marks should be estimated : "))
+    # marks = (m*hours+b) + compute_error_for_given_points(b, m, points)
+    # print("The estimated value is ", marks)
 
 if __name__=="__main__":
     run()
